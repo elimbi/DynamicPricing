@@ -1,18 +1,18 @@
 
 <template>
     <template if:true={displayDate}>
-        <p class="slds-text-heading_small">Preise für: <strong>{displayDate}</strong></p>
+        <p class="slds-text-heading_large">Prices for: <strong>{displayDate}</strong></p>
     </template>
     
     <template if:true={fallbackUsed}>
         <div class="slds-notify slds-notify_alert slds-theme_warning slds-var-m-top_small" role="alert">
-            ⚠️ Für morgen wurden keine Preise gefunden. Es werden stattdessen die heutigen angezeigt.
+            ⚠️ No prices were found for tomorrow. Showing today’s prices instead.
         </div>
     </template>
     <lightning-card>
         <div slot="title" class="custom-card-title">
             <span class="custom-card-title-text">
-            HEUTE SCHON GEWUßT WAS DU WANN MORGEN GÜNSTIG EINSCHALTEN KANNST?
+                💡 TURN ON WHAT YOU NEED – WHEN IT’S CHEAPEST.
         </span>
         </div>
 
@@ -20,9 +20,9 @@
             <template for:each={records} for:item="item">
                 <div key={item.recordId} class="record-row">
                     <img src={item.iconUrl} alt={item.Category} class="custom-icon" />&nbsp;
-                   FÜR NUR!! <span class="price">{item.formattedPrice}</span>&nbsp;
-                    UM &nbsp;<span class="time">{item.formattedTime}</span>&nbsp; AM 
-                     &nbsp;<span class="date">{item.formattedDate}</span>&nbsp;
+                   <span class="price">{item.formattedPrice}</span>&nbsp;
+                    &nbsp;<span class="time">{item.formattedTime}</span>&nbsp;
+
                 </div>
             </template>
         </template>

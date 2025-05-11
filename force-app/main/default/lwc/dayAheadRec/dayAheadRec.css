@@ -1,9 +1,8 @@
 .custom-icon {
-    width: 70px;
-    height: 70px;
+    width: 120px;
+    height: 120px;
     margin-right: 40px;
 }
-
 .record-row {
     display: flex;
     align-items: center;
@@ -12,21 +11,24 @@
     border-radius: 40px;
     background-color: #f9f9f9;
 }
-
 .category {
     font-weight: bold;
     margin-right: 40px;
 }
-
-.price,
-.datetime {
+.price {
     margin-left: 0.6rem;
+    font-weight: bold;
+    font-size: 1.8rem;
 }
-
+.time {
+    margin-left: 0.6rem;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
 .custom-card-title {
     text-align: center;
     font-weight: bold;
-    font-size: 0.8rem;
+    font-size: 1.8rem;
     color: #dd1d2e;
     display: block;
 }

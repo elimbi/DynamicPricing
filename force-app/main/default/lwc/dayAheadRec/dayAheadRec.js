@@ -23,7 +23,7 @@ export default class DayAheadPrices extends LightningElement {
         getTop4LowestPricesPerDay({ forDate: nextDay })
             .then(result => {
                 if (!result || result.length === 0) {
-                    console.warn('Keine Daten für morgen, zeige stattdessen heutige Preise.');
+                    console.warn('No prices were found for tomorrow. Showing today’s prices instead.');
                     this.fallbackUsed = true;
                     this.displayDate = this.formatDisplayDate(today); // 👈 Anzeigen: heute
                     return getTop4LowestPricesPerDay({ forDate: today });
@@ -55,7 +55,7 @@ export default class DayAheadPrices extends LightningElement {
                 this.error = undefined;
             })
             .catch(error => {
-                console.error('Fehler beim Laden der Preise:', error);
+                console.error('⚠️ Error loading prices', error);
                 this.error = error.body?.message || error.message;
                 this.records = undefined;
             });
@@ -97,7 +97,7 @@ export default class DayAheadPrices extends LightningElement {
                 this.error = undefined;
             })
             .catch(error => {
-                console.error('Fehler beim Nachladen der Preise:', error);
+                console.error('⚠️ Error loading prices', error);
                 this.error = error.body?.message || error.message;
                 this.records = undefined;
             });
