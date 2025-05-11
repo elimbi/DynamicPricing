@@ -1,0 +1,32 @@
+.custom-icon {
+    width: 70px;
+    height: 70px;
+    margin-right: 40px;
+}
+
+.record-row {
+    display: flex;
+    align-items: center;
+    padding: 60px;
+    margin-bottom: 10px;
+    border-radius: 40px;
+    background-color: #f9f9f9;
+}
+
+.category {
+    font-weight: bold;
+    margin-right: 40px;
+}
+
+.price,
+.datetime {
+    margin-left: 0.6rem;
+}
+
+.custom-card-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: #dd1d2e;
+    display: block;
+}
